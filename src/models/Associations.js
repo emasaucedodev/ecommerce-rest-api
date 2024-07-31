@@ -13,8 +13,8 @@ Product.belongsTo(Category, { foreignKey: 'categoryId' })
 Product.belongsToMany(Cart, { through: 'CartProduct', foreignKey: 'productId' })
 Product.belongsToMany(Order, { through: 'OrderProduct', foreignKey: 'productId' })
 
-Cart.belongsTo(User, { foreignKey: 'userId' });
-Cart.belongsToMany(Product, { through: 'CartProduct', foreignKey: 'cartId' });
+Cart.belongsTo(User, { foreignKey: 'userId' })
+Cart.belongsToMany(Product, { through: 'CartProduct', foreignKey: 'cartId' })
 
-Order.belongsTo(User, { foreignKey: 'userId' });
-Order.belongsToMany(Product, { through: 'OrderProduct', foreignKey: 'orderId' });
+Order.belongsTo(User, { foreignKey: 'userId' })
+Order.belongsToMany(Product, { through: 'OrderProduct', foreignKey: 'orderId' })

@@ -10,10 +10,12 @@ export const User = sequelize.define(
             autoIncrement: true
         },
         name: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            unique: true
         },
         email: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            unique: true
         },
         password: {
             type: DataTypes.STRING
@@ -21,5 +23,8 @@ export const User = sequelize.define(
         isAdmin: {
             type: DataTypes.BOOLEAN
         },
+        isActive: {
+            type: DataTypes.BOOLEAN
+        }
     }
 )
